@@ -1,2 +1,2 @@
 # Fundamentals
-Basics in html, oss and javascript
+Basics in html, css and javascript
