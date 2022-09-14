@@ -1,3 +1,22 @@
 # Fundamentals
 
-Basics in html, css and javascript
+Date: September 14th 2022
+
+Project purpose: 
+
+To explore and gain experience from  HTML, CSS and Javascript.
+
+
+Project Name :  
+
+Michael Bay Filmography
+
+page topics:
+
+- Director Bio
+- Filmography  + (Summary)
+- Soundtrack info
+- Overview over actor/actresses
+
+
+
