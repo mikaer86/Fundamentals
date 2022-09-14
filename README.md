@@ -1,11 +1,15 @@
 # Fundamentals
 
-Date: September 14 2022
+Date: September 14th 2022
 
-Project purpose: To explore and gain experience from  HTML, CSS and Javascript.
+Project purpose: 
+
+To explore and gain experience from  HTML, CSS and Javascript.
 
 
-Project Name :  Michael Bay Filmography
+Project Name :  
+
+Michael Bay Filmography
 
 page topics:
 
