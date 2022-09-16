@@ -3,7 +3,7 @@
 
 html {
   font-size: 16px;
-  --contentHeadLineOne: 1.6rem;
+  --contentHeadLineOne: 1.7rem;
   --contentHeadLineTwo: 1.2rem;
   --contentText: 0.98rem;
   --textColor: black;
@@ -130,7 +130,7 @@ h4 {
 
 .label {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 3.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 150, 47);
 }
@@ -138,7 +138,7 @@ h4 {
 .label h2 {
   text-align: left;
   font-size: 1.8rem;
-  letter-spacing: 1.3px;
+  letter-spacing: 0.5rem;
   color: white;
   font-family: var(--headlineFont);
 }
@@ -152,10 +152,10 @@ h4 {
 }
 
 .img-section {
-  min-width: 30.33%;
+  min-width: 30.22%;
   width: 350px;
   padding: 1.5rem;
-  margin-top: 60px;
+  margin-top: 20px;
 }
 
 .img-section img {
@@ -178,6 +178,12 @@ h4 {
 .summary-content p {
   color: white;
   font-size: 1rem;
+}
+
+.summary-content audio {
+  width: 70%;
+  margin: 0 auto;
+  display: table;
 }
 
 .film-rating {
@@ -239,6 +245,7 @@ h4 {
     .large-section {
       align-items: center;
       flex-direction: column;
+      justify-content: space-between;
     }
 
     .img-section {
