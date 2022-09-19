@@ -1,13 +1,24 @@
-const targetImg = document.getElementById('heart');
-const targetTag = document.getElementById('number');
+const likeBtn = document.getElementById('heart');
+const likeCount = document.getElementById('number');
 
-function like(targetImg, targetTag) {
+function like() {
 
-    if(onclick === heart){
-
-
-
-
-    }
-
+    likeBtn.addEventListener('click', function onClick(event) {
+    
+        event.target.style.stroke = 'red';
+        event.target.style.fill = 'red';
+    
+    });
 }
+
+
+ 
+
+
+
+
+
+
+
+
+
