@@ -191,14 +191,9 @@ h4 {
   gap: 3rem;
 }
 
-.content-rating span {
-  width: 30%;
-  width: 1.8rem;
-  height: 1.8rem;
-}
-
-.content-rating img {
-  width: 100%;
+.svg-heart {
+  width: 1.1rem;
+  height: 1.1rem;
 }
 
 .summary-content audio {
@@ -215,7 +210,7 @@ h4 {
   flex-direction: row;
   align-items: center;
   position: relative;
-  oveflow: hidden;
+  overflow: hidden;
   gap: 2rem;
 }
 
