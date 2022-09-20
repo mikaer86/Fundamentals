@@ -24,29 +24,6 @@ p {
   color: white;
 }
 
-h1 {
-  font-size: var(--contentHeadLineOne);
-  text-align: center;
-  font-kerning: normal;
-}
-
-h2,
-h3 {
-  font-size: var(--contentHeadLineTwo);
-  color: var(--textColor);
-  font-weight: bold;
-  font-kerning: normal;
-}
-
-h4 {
-  font-family: var(--headlineFont);
-  font-size: var(--contentHeadLineTwo);
-  color: var(--textColor);
-  padding: 0.5rem;
-  font-weight: bold;
-  font-kerning: normal;
-}
-
 .navigation {
   width: 100%;
   display: flex;
@@ -72,12 +49,9 @@ h4 {
 .hero {
   display: flex;
   min-width: 100%;
-  padding: 1rem;
-  margin: auto;
 }
 .hero img {
   width: 100%;
-  position: relative;
   object-fit: cover;
 }
 .hero h1 {
@@ -130,7 +104,7 @@ h4 {
 
 .label {
   width: 100%;
-  margin-top: 3.5rem;
+  margin-top: 0.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 150, 47);
 }
@@ -192,8 +166,8 @@ h4 {
 }
 
 .svg-heart {
-  width: 1.1rem;
-  height: 1.1rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .summary-content audio {
@@ -284,8 +258,30 @@ h4 {
   }
 
   @media screen and (max-width: 480px) {
+    .hero {
+      height: 60vh;
+      z-index: -1;
+      background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
+    }
+
     .navigation {
-      display: none;
+      display: block;
+      flex-direction: column;
+      background-color: #00000028;
+      justify-content: flex-end;
+      top: 0;
+      position: fixed;
+      z-index: 999;
+    }
+
+    .navigation ul li {
+      display: block;
+      padding: 0 auto;
+    }
+
+    .navigation a {
+      font-size: 0.9rem;
+      color: white;
     }
 
     .large-section {
