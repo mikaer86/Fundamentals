@@ -28,11 +28,11 @@ p {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 2.2rem;
+  padding: 2.3rem;
 }
 
 .navigation ul li {
-  margin: 1rem;
+  margin: 0.4rem;
   display: inline;
   list-style: none;
 }
@@ -57,7 +57,6 @@ p {
 .hero h1 {
   font-size: var(--headlineFont, --contentHeadLineTwo);
   top: 60%;
-  position: absolute;
   margin: auto;
 }
 
@@ -259,31 +258,48 @@ p {
 
   @media screen and (max-width: 480px) {
     .hero {
-      height: 60vh;
+      height: 65vh;
       z-index: -1;
       background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
     }
 
     .navigation {
-      display: block;
+      display: flex;
+      height: 4rem;
       flex-direction: column;
       background-color: #00000028;
-      justify-content: flex-end;
-      top: 0;
       position: fixed;
+      background-color: black;
       z-index: 999;
     }
 
-    .navigation ul li {
-      display: block;
-      padding: 0 auto;
+    .navigation ul {
+      display: none;
+      align-items: center;
     }
 
     .navigation a {
+      display: none;
       font-size: 0.9rem;
       color: white;
+      padding: 0 auto;
     }
 
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      align-content: right;
+    }
+    .bar {
+      display: block;
+      align-self: left;
+      width: 25px;
+      height: 2px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: white;
+    }
     .large-section {
       align-items: center;
       flex-direction: column;
