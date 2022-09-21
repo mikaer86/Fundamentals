@@ -46,6 +46,11 @@ p {
   text-transform: uppercase;
 }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
 .hero {
   display: flex;
   min-width: 100%;
@@ -236,9 +241,86 @@ p {
   }
 }
 
-@media screen and (max-width: 804px) {
+@media screen and (max-width: 803px) {
+  .hero {
+    height: 65vh;
+    z-index: -1;
+    background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
+  }
+
   .navigation {
+    display: flex;
+    width: 100%;
+    height: 4rem;
+    flex-direction: column;
+    background-color: black;
+    position: fixed;
+    z-index: 999;
+  }
+
+  .navigation ul {
     display: none;
+    align-items: center;
+  }
+
+  .navigation a {
+    display: none;
+    font-size: 0.9rem;
+    color: white;
+    padding: 0 auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-left: 96%;
+    margin-top: 0.5rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    transition: 0.4s;
+    z-index: 999;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .large-section {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .bio {
@@ -256,62 +338,11 @@ p {
     text-align: center;
   }
 
-  @media screen and (max-width: 480px) {
-    .hero {
-      height: 65vh;
-      z-index: -1;
-      background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
-    }
+  .img-section {
+    width: 100%;
+  }
 
-    .navigation {
-      display: flex;
-      height: 4rem;
-      flex-direction: column;
-      background-color: #00000028;
-      position: fixed;
-      background-color: black;
-      z-index: 999;
-    }
-
-    .navigation ul {
-      display: none;
-      align-items: center;
-    }
-
-    .navigation a {
-      display: none;
-      font-size: 0.9rem;
-      color: white;
-      padding: 0 auto;
-    }
-
-    .hamburger {
-      display: block;
-      cursor: pointer;
-      align-content: right;
-    }
-    .bar {
-      display: block;
-      align-self: left;
-      width: 25px;
-      height: 2px;
-      margin: 5px auto;
-      -webkit-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      background-color: white;
-    }
-    .large-section {
-      align-items: center;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .img-section {
-      width: 100%;
-    }
-
-    .creator {
-      display: none;
-    }
+  .creator {
+    display: none;
   }
 }
