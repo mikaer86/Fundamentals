@@ -31,21 +31,6 @@ p {
   padding: 2.3rem;
 }
 
-.navigation ul li {
-  margin: 0.4rem;
-  display: inline;
-  list-style: none;
-}
-
-.navigation a {
-  font-family: "montserrat";
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: black;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -131,7 +116,7 @@ p {
 
 .label {
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 3.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 150, 47);
 }
@@ -150,13 +135,13 @@ p {
   justify-content: space-around;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 1.5rem;
 }
 
 .img-section {
   min-width: 30.22%;
   width: 350px;
-  padding: 1.5rem;
-  margin-top: 20px;
+  padding: 1.9rem;
 }
 
 .img-section img {
@@ -201,36 +186,6 @@ p {
   width: 70%;
   margin: 0 auto;
   display: table;
-}
-
-.scrollbar {
-  width: 100%;
-  height: 20%;
-  background-color: lightgray;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  gap: 2rem;
-}
-
-.profile-container {
-  width: 14.33%;
-  padding: 0 2.1 0 2.1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-
-.profile-container img {
-  width: 100%;
-  height: 100%;
-  border-radius: 16.6% 10.6% 16.6% 10.6%;
-}
-
-.profile-content {
-  width: 100%;
-  padding: 1.2em;
 }
 
 .film-rating {
@@ -278,17 +233,15 @@ p {
     flex-direction: column;
     background-color: black;
     position: fixed;
-    z-index: 999;
   }
 
   .navigation ul {
-    display: none;
+    display: block;
     align-items: center;
   }
 
   .navigation a {
-    display: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: white;
     padding: 0 auto;
   }
@@ -317,7 +270,7 @@ p {
     left: 0;
   }
 
-  . .large-section {
+  .large-section {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
@@ -331,6 +284,7 @@ p {
   }
 
   .label {
+    margin: 0;
     flex-grow: 1;
   }
 
