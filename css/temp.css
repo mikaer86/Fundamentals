@@ -55,11 +55,6 @@ p {
   width: 100%;
   object-fit: cover;
 }
-.hero h1 {
-  font-size: var(--headlineFont, --contentHeadLineTwo);
-  top: 60%;
-  margin: auto;
-}
 
 .flex {
   display: flex;
@@ -194,11 +189,6 @@ p {
   width: 100%;
   width: 450px;
   height: 50px;
-}
-
-.rating p {
-  text-align: center;
-  font-weight: bold;
 }
 
 .creator {
