@@ -51,6 +51,17 @@ p {
   cursor: pointer;
 }
 
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin-left: 96%;
+  margin-top: 0.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
+}
+
 .hero {
   display: flex;
   min-width: 100%;
@@ -68,6 +79,18 @@ p {
 .flex {
   display: flex;
   flex-direction: column;
+}
+
+.nav-menu {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  transition: 0.4s;
 }
 
 .bio {
@@ -273,40 +296,17 @@ p {
   .hamburger {
     display: block;
   }
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin-left: 96%;
-    margin-top: 0.5rem;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    background-color: white;
-  }
 
   .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
   .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg) translate(4px);
   }
 
   .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .nav-menu {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: black;
-    width: 100%;
-    text-align: center;
-    transition: 0.4s;
-    z-index: 999;
+    transform: translateY(-8px) rotate(-45deg) translate(4px);
   }
 
   .nav-item {
@@ -317,7 +317,7 @@ p {
     left: 0;
   }
 
-  .large-section {
+  . .large-section {
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
