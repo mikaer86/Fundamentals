@@ -47,11 +47,11 @@ p {
   background-color: white;
 }
 
-.hero {
+.hero-header {
   display: flex;
   min-width: 100%;
 }
-.hero img {
+.hero-header img {
   width: 100%;
   object-fit: cover;
 }
