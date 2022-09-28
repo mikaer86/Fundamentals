@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="eng">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +8,9 @@
   </head>
   <body>
     <header class="hero-header">
-      <nav class="navigation" >
-        <a href="#" class="page-name">
-          <span class="page-name-text">BAYHEM</span>
+      <nav class="navigation">
+        <a href="index.html" class="page-name">
+          <h1 class="page-name-text"> BAYHEM </h1>
         </a>
         <ul class="nav-menu">
           <li class="nav-item"><a href="badboys.html">Bad Boys</a></li>
@@ -18,23 +18,26 @@
           <li class="nav-item"><a href="armageddon.html">Armageddon</a></li>
         </ul>
         <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
+          <span class="hamburger__bar"></span>
         </div>
       </nav>
     </header>
 
-    <div class="flex">
-      <div class="label">
+    <div class="flex-wrapper">
+   
+      <div class="label__bio">
         <h2>Bio</h2>
       </div>
-      <div class="bio">
+      <main class="bio">
         <section class="bio-img">
           <img src="img/profile.jpeg" alt="Michael-Bay" />
         </section>
         <section class="bio-content">
+          <article class="content-holder">
           <h2>Michael Bay</h2>
+        
           <p>
             Bay got his start in the film industry interning with George Lucas
             when he was 15, filing the storyboards for Raiders of the Lost Ark,
@@ -43,7 +46,7 @@
             that he decided to become a film director.</p>
             
             <p>
-            He graduated fromWesleyan University in 1986, majoring in both English 
+            He graduated from Wesleyan University in 1986, majoring in both English 
             and film. He
             was a member of the Psi Upsilon fraternity and a favorite student of
             film historian Jeanine Basinger. For his graduate work, he attended
@@ -54,7 +57,7 @@
           <p> His
             90-second World War II–inspired Coca-Cola advertisement was picked
             up by Capitol Records. His first national commercial was for the Red
-            Cross, which won a Clio Award in 1992.[21][22] He directed Goodby,
+            Cross, which won a Clio Award in 1992. He directed Goodby,
             Silverstein & Partners' "Got Milk?" ad campaign for the California
             Milk Processors Board in 1993, which also won a Grand Prix Clio
             Award for Commercial of the Year.</p>
@@ -71,15 +74,16 @@
             of 1995. Bay's success led to a strong partnership and friendship
             with Jerry Bruckheimer.</p>
           </p>
+        </article>
         </section>
-      </div>
+      </main>
     
-      <div class="label">
+      <div class="label__filmography">
         <h2>Filmography</h2>
       </div>
-      <section class="large-section">
+      <section class="film-section">
        
-        <header class="img-section">
+        <header class="film-img-section">
           <img src="img/badboys.png" alt="bad-boys-poster" />
           <div class="summary-content">
             <section class="content-rating">
@@ -91,7 +95,7 @@
           </div>
         </header>
 
-        <header class="img-section">
+        <header class="film-img-section">
           <img src="img/therock.jpeg" alt="the-rock-poster" />
           <div class="summary-content">
             <section class="content-rating">
@@ -103,24 +107,24 @@
           </div>
         </header>
 
-        <header class="img-section">
+        <header class="film-img-section">
           <img src="img/armageddon.jpeg" alt="armageddon-poster" />
           <div class="summary-content">
             <section class="content-rating">
             <svg class="svg-heart" id="heart"  viewBox="0 0 20 20">
-							<path fill = "white" d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
-						</svg>
+              <path fill = "white" d="M9.719,17.073l-6.562-6.51c-0.27-0.268-0.504-0.567-0.696-0.888C1.385,7.89,1.67,5.613,3.155,4.14c0.864-0.856,2.012-1.329,3.233-1.329c1.924,0,3.115,1.12,3.612,1.752c0.499-0.634,1.689-1.752,3.612-1.752c1.221,0,2.369,0.472,3.233,1.329c1.484,1.473,1.771,3.75,0.693,5.537c-0.19,0.32-0.425,0.618-0.695,0.887l-6.562,6.51C10.125,17.229,9.875,17.229,9.719,17.073 M6.388,3.61C5.379,3.61,4.431,4,3.717,4.707C2.495,5.92,2.259,7.794,3.145,9.265c0.158,0.265,0.351,0.51,0.574,0.731L10,16.228l6.281-6.232c0.224-0.221,0.416-0.466,0.573-0.729c0.887-1.472,0.651-3.346-0.571-4.56C15.57,4,14.621,3.61,13.612,3.61c-1.43,0-2.639,0.786-3.268,1.863c-0.154,0.264-0.536,0.264-0.69,0C9.029,4.397,7.82,3.61,6.388,3.61"></path>
+            </svg>
           </section>
           </div>
         </header>
       </section>
 
-      <div class="label">
+      <div class="label__soundtrack">
         <h2>Soundtrack</h2>
       </div>
 
-      <section class="large-section">
-        <header class="img-section">
+      <section class="film-section">
+        <header class="film-img-section">
           <img src="img/cover1.jpg" alt="album-cover-bad-boys-soundtrack" />
           <div class="summary-content">
             <audio controls>
@@ -129,7 +133,7 @@
           </div>
         </header>
 
-        <header class="img-section">
+        <header class="film-img-section">
           <img src="img/cover2.jpeg" alt="album-cover-the-rock-soundtrack" />
           <div class="summary-content">
           <audio controls>
@@ -138,7 +142,7 @@
           </div>
         </header>
 
-        <header class="img-section">
+        <header class="film-img-section">
           <img src="img/cover3.jpeg" alt="album-cover-armageddon-soundtrack" />
           <div class="summary-content">
           <audio controls>
