@@ -7,6 +7,7 @@ html {
   --contentHeadLineTwo: 1.3rem;
   --contentText: 0.98rem;
   --textColor: black;
+  --labelColor: ;
   --headlineFont: "Bebas Neue";
   --contentFont: "Montserrat";
 }
@@ -15,6 +16,10 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: whitesmoke;
 }
 
 p {
@@ -164,12 +169,19 @@ p {
   padding: 1.5rem;
   background-color: rgb(206, 150, 47);
 }
+.label__nominations {
+  width: 100%;
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background-color: rgb(206, 150, 47);
+}
 
 /* label border title text */
 
 .label__bio,
 .label__filmography,
-.label__soundtrack h2 {
+.label__soundtrack,
+.label__nominations h2 {
   text-align: left;
   font-size: 1.8rem;
   letter-spacing: 0.5rem;
@@ -216,6 +228,36 @@ p {
   font-size: 1rem;
 }
 
+.summary-content-nominations {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1.3rem 2rem;
+  margin: 3rem auto;
+  border: 0.5px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.summary-content-nominations p,
+i {
+  color: var(--textColor);
+  font-family: var(--contentFont);
+  padding-top: 1rem;
+}
+
+.summary-content-nominations h4 {
+  font-family: var(--headlineFont);
+  font-size: var(--contentHeadLineTwo);
+}
+
+.summary-content-nominations__label {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: grey;
+}
+
 .content-rating {
   width: 100%;
   display: flex;
@@ -259,13 +301,11 @@ p {
   font-family: var(--contentFont);
   color: black;
 }
-
 @media screen and (max-width: 1300px) {
   .bio-img {
     display: none;
   }
 }
-
 @media screen and (max-width: 747px) {
   .hero-header {
     z-index: -1;
@@ -273,25 +313,20 @@ p {
   .hamburger {
     display: block;
   }
-
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
-
   .hamburger.active .hamburger__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) translate(4px);
   }
-
   .hamburger.active .hamburger__bar:nth-child(3) {
     transform: translateY(-2px) rotate(-45deg) translate(4px);
   }
-
   .navigation {
     position: fixed;
     padding: 1rem 1.8rem;
     z-index: 999;
   }
-
   .nav-menu {
     left: -100%;
     top: 5rem;
@@ -300,11 +335,9 @@ p {
     flex-direction: column;
     background-color: rgb(20, 20, 20);
   }
-
   .nav-item {
     margin: 0.2rem auto;
   }
-
   .nav-menu.active {
     left: 0;
     width: 100%;
