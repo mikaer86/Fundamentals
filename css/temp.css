@@ -4,7 +4,7 @@
 html {
   font-size: 16px;
   --contentHeadLineOne: 1.7rem;
-  --contentHeadLineTwo: 1.2rem;
+  --contentHeadLineTwo: 1.3rem;
   --contentText: 0.98rem;
   --textColor: black;
   --headlineFont: "Bebas Neue";
@@ -18,17 +18,65 @@ html {
 }
 
 p {
-  font-family: var(--contentFont);
   font-size: var(--contentText);
   font-kerning: normal;
   color: white;
 }
 
-.navigation {
-  width: 100%;
+.flex-wrapper {
   display: flex;
-  justify-content: center;
-  padding: 2.3rem;
+  flex-direction: column;
+  height: auto;
+}
+
+.hero-header {
+  display: flex;
+  min-width: 100%;
+  padding-bottom: 16.5rem;
+  background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
+}
+
+/* left corner logo container */
+.page-name {
+  padding: 0.7rem;
+  text-decoration: none;
+  color: white;
+}
+/* left corner logo font */
+.page-name-text {
+  font-family: var(--headlineFont);
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+/* navigation container for screens bigger then 480px */
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 1.8rem;
+  background-color: black;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.nav-item {
+  padding: 1rem;
+  list-style: none;
+}
+
+.nav-item a {
+  color: white;
+  text-decoration: none;
+  font-family: var(--contentFont);
+  font-size: var(--contentHeadLineTwo);
 }
 
 .hamburger {
@@ -36,66 +84,29 @@ p {
   cursor: pointer;
 }
 
-.bar {
+.hamburger__bar {
   display: block;
-  width: 25px;
+  width: 23px;
   height: 3px;
-  margin-left: 96%;
-  margin-top: 0.5rem;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  margin: 5px auto;
+  transition: all 0.4s ease-in-out;
   background-color: white;
 }
 
-.hero-header {
-  display: flex;
-  min-width: 100%;
-}
-.hero-header img {
-  width: 100%;
-  object-fit: cover;
-}
-
-.flex {
-  display: flex;
-  flex-direction: column;
-}
-
-.nav-menu {
-  position: fixed;
-  left: -100%;
-  top: 70px;
-  gap: 0;
-  flex-direction: column;
-  background-color: black;
-  width: 100%;
-  text-align: center;
-  transition: 0.4s;
-}
-
-.page-name {
-  position: absolute;
-  padding: 0.7rem;
-  text-decoration: none;
-}
-
-.page-name-text {
-  font-family: var(--headlineFont);
-  font-size: 2rem;
-  letter-spacing: 0.2rem;
-}
-
+/* this is the main container for bio */
 .bio {
   display: flex;
-  min-width: 100%;
-  min-height: 75%;
-  flex-grow: 1;
+  min-height: 66.67%;
   flex-direction: row;
 }
 
+/* this is the image container for bio */
+
 .bio-img {
-  width: 25%;
+  width: 33.33%;
 }
+
+/* this is the  bio image properties */
 
 .bio-img img {
   width: 100%;
@@ -103,32 +114,62 @@ p {
   object-fit: cover;
 }
 
+/* this is the text content container */
+
 .bio-content {
   width: 100%;
   padding: 1.8rem;
 }
 
+/* bio header text properties */
+
 .bio-content h2 {
   text-align: center;
   padding-bottom: 1.5rem;
-  font-size: var(--contentHeadLineOne);
+  font-size: var(--contentHeadLineTwo);
   font-family: var(--contentFont);
 }
+
+/* bio text properties */
 
 .bio-content p {
   line-height: 1.7;
   letter-spacing: 1.2px;
   color: black;
+  font-size: var(--contentText);
+  font-family: var(--contentFont);
 }
+/*
+.content-holder {
+  padding: 2.4rem;
+}
+/* label border */
 
-.label {
+.label__bio {
   width: 100%;
-  margin-top: 3.5rem;
   padding: 1.5rem;
   background-color: rgb(206, 150, 47);
 }
 
-.label h2 {
+.label__filmography {
+  width: 100%;
+  margin-top: 1.8rem;
+  padding: 1.5rem;
+  background-color: rgb(206, 150, 47);
+}
+
+.label__soundtrack {
+  width: 100%;
+  margin-top: 1.8rem;
+  padding: 1.5rem;
+  background-color: rgb(206, 150, 47);
+}
+
+/* label border title text */
+
+.label__bio,
+.label__filmography,
+.label__soundtrack h2 {
   text-align: left;
   font-size: 1.8rem;
   letter-spacing: 0.5rem;
@@ -136,7 +177,9 @@ p {
   font-family: var(--headlineFont);
 }
 
-.large-section {
+/* film section container */
+
+.film-section {
   min-width: 100%;
   display: flex;
   justify-content: space-around;
@@ -145,13 +188,13 @@ p {
   padding: 1.5rem;
 }
 
-.img-section {
+.film-img-section {
   min-width: 30.22%;
   width: 350px;
   padding: 1.9rem;
 }
 
-.img-section img {
+.film-img-section img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -185,8 +228,8 @@ p {
 }
 
 .svg-heart {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .summary-content audio {
@@ -207,100 +250,63 @@ p {
   display: flex;
   min-width: 100%;
   height: 5.6rem;
+  align-items: center;
+  justify-content: center;
   background-color: orange;
-  margin-top: 760px;
 }
 
 .footer-element p {
   font-family: var(--contentFont);
-  text-align: center;
   color: black;
 }
 
-@media screen and (max-width: 1025px) {
+@media screen and (max-width: 1300px) {
   .bio-img {
     display: none;
   }
 }
 
-@media screen and (max-width: 803px) {
-  .hero {
-    height: 65vh;
+@media screen and (max-width: 747px) {
+  .hero-header {
     z-index: -1;
-    background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
   }
-
-  .navigation {
-    display: flex;
-    width: 100%;
-    height: 4rem;
-    flex-direction: column;
-    background-color: black;
-    position: fixed;
-  }
-
-  .navigation ul {
-    display: block;
-    align-items: center;
-  }
-
-  .navigation a {
-    font-size: 1rem;
-    color: white;
-    padding: 0 auto;
-  }
-
   .hamburger {
     display: block;
   }
 
-  .hamburger.active .bar:nth-child(2) {
+  .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
 
-  .hamburger.active .bar:nth-child(1) {
+  .hamburger.active .hamburger__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) translate(4px);
   }
 
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg) translate(4px);
+  .hamburger.active .hamburger__bar:nth-child(3) {
+    transform: translateY(-2px) rotate(-45deg) translate(4px);
+  }
+
+  .navigation {
+    position: fixed;
+    padding: 1rem 1.8rem;
+    z-index: 999;
+  }
+
+  .nav-menu {
+    left: -100%;
+    top: 5rem;
+    position: fixed;
+    text-align: center;
+    flex-direction: column;
+    background-color: rgb(20, 20, 20);
   }
 
   .nav-item {
-    margin: 16px 0;
+    margin: 0.2rem auto;
   }
 
   .nav-menu.active {
     left: 0;
-  }
-
-  .large-section {
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .bio {
-    flex-direction: column;
-  }
-  .bio-content {
     width: 100%;
-  }
-
-  .label {
-    margin: 0;
-    flex-grow: 1;
-  }
-
-  .label h2 {
-    text-align: center;
-  }
-
-  .img-section {
-    width: 100%;
-  }
-
-  .creator {
-    display: none;
   }
 }
