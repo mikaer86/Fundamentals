@@ -1,31 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
+/* defining the font-sizes and color attributes of the page with variables */
 html {
   font-size: 16px;
   --contentHeadLineOne: 1.7rem;
   --contentHeadLineTwo: 1.3rem;
   --contentText: 0.98rem;
-  --textColor: black;
-  --labelColor: ;
+  --themeColor: rgb(27, 27, 27);
+  --labelColor: rgb(210, 158, 61);
   --headlineFont: "Bebas Neue";
   --contentFont: "Montserrat";
 }
-
+/* changing the default settings of padding and margins*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-body {
-  background-color: whitesmoke;
-}
-
 p {
   font-size: var(--contentText);
   font-kerning: normal;
-  color: white;
+  color: var(--themeColor);
 }
 
 .flex-wrapper {
@@ -39,6 +35,21 @@ p {
   min-width: 100%;
   padding-bottom: 16.5rem;
   background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
+}
+
+.mobile-overlay {
+  display: none;
+  width: 100%;
+  align-items: center;
+  position: absolute;
+}
+
+.mobile-overlay h2 {
+  top: 20%;
+  left: 25%;
+  font-family: var(--headlineFont);
+  font-size: var(--contentHeadLineOne);
+  color: #404040;
 }
 
 /* left corner logo container */
@@ -62,7 +73,7 @@ p {
   align-items: center;
   width: 100%;
   padding: 1.5rem 1.8rem;
-  background-color: black;
+  background-color: var(--themeColor);
 }
 
 .nav-menu {
@@ -153,27 +164,26 @@ p {
 .label__bio {
   width: 100%;
   padding: 1.5rem;
-  background-color: rgb(206, 150, 47);
+  background-color: var(--labelColor);
 }
 
 .label__filmography {
   width: 100%;
-  margin-top: 1.8rem;
   padding: 1.5rem;
-  background-color: rgb(206, 150, 47);
+  background-color: var(--labelColor);
 }
 
 .label__soundtrack {
   width: 100%;
   margin-top: 1.8rem;
   padding: 1.5rem;
-  background-color: rgb(206, 150, 47);
+  background-color: var(--labelColor);
 }
 .label__nominations {
   width: 100%;
   margin-top: 4rem;
   padding: 1.5rem;
-  background-color: rgb(206, 150, 47);
+  background-color: var(--labelColor);
 }
 
 /* label border title text */
@@ -195,15 +205,15 @@ p {
   min-width: 100%;
   display: flex;
   justify-content: space-around;
+  row-gap: 1.5rem;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 1.5rem;
 }
 
 .film-img-section {
-  min-width: 30.22%;
-  width: 350px;
-  padding: 1.9rem;
+  min-width: 30.33%;
+  padding: 2rem;
+  width: 220px;
 }
 
 .film-img-section img {
@@ -216,7 +226,6 @@ p {
 
 .summary-content {
   min-width: 100%;
-  width: 233px;
   padding: 1.1rem;
   background-color: rgb(37, 37, 37);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -274,6 +283,10 @@ i {
   height: 1.3rem;
 }
 
+#svg-heart-colored {
+  background-color: red;
+}
+
 .summary-content audio {
   width: 70%;
   margin: 0 auto;
@@ -301,21 +314,34 @@ i {
   font-family: var(--contentFont);
   color: black;
 }
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .bio-img {
     display: none;
   }
+
+  .film-img-section {
+    margin-top: 3.6rem;
+    margin-bottom: 3.6rem;
+  }
 }
+
 @media screen and (max-width: 747px) {
   .hero-header {
     z-index: -1;
   }
+
+  .film-img-section {
+    margin: 3.6rem;
+  }
+  /*show hamburger icon */
   .hamburger {
     display: block;
   }
+  /*add 0 opacity to the mid span element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
+  /*add 0 opacity to the mid span element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) translate(4px);
   }
@@ -341,5 +367,35 @@ i {
   .nav-menu.active {
     left: 0;
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background-color: #ffffff;
+  }
+
+  p {
+    color: #404040;
+  }
+
+  .hero-header {
+    display: none;
+  }
+
+  .mobile-overlay {
+    display: block;
+    z-index: 2;
+  }
+
+  .film-section {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .film-img-section {
+    width: 33.33%;
+    padding: 1.5rem;
   }
 }
