@@ -2,24 +2,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 /* defining the font-sizes and color attributes of the page with variables */
 html {
-  font-size: 16px;
-  --contentHeadLineOne: 1.7rem;
-  --contentHeadLineTwo: 1.3rem;
-  --contentText: 0.98rem;
-  --themeColor: rgb(27, 27, 27);
+  font-size: 100%;
+  --navLogoSize: 1.7rem;
+  --navLinkSize: 1.5rem;
+  --labelFontSize: 2rem;
+  --contentFontSize: 0.98rem;
+  --contentFontColor: rgb(37, 37, 37);
+  --navColor: rgb(36, 36, 36);
   --labelColor: rgb(210, 158, 61);
+  --labelFontColor: rgb(251, 251, 251);
   --headlineFont: "Bebas Neue";
   --contentFont: "Montserrat";
 }
-/* changing the default settings of padding and margins*/
+/* changing the default settings of padding and margins,adding */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-p {
-  font-size: var(--contentText);
+.contentText {
+  font-size: var(--contentFontSize);
   font-kerning: normal;
   color: var(--themeColor);
 }
@@ -27,6 +30,7 @@ p {
 .flex-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: auto;
 }
 
@@ -35,21 +39,6 @@ p {
   min-width: 100%;
   padding-bottom: 16.5rem;
   background-image: url("https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/cW5lDBG/videoblocks-a-retro-3d-rendering-of-movie-making-film-tape-of-white-and-black-colors-the-film-tape-moves-horizontally-and-slowly-in-the-bright-yellow-background-it-reminds-hollywood-masterpieces_h9mikhxt6w_thumbnail-1080_01.png");
-}
-
-.mobile-overlay {
-  display: none;
-  width: 100%;
-  align-items: center;
-  position: absolute;
-}
-
-.mobile-overlay h2 {
-  top: 20%;
-  left: 25%;
-  font-family: var(--headlineFont);
-  font-size: var(--contentHeadLineOne);
-  color: #404040;
 }
 
 /* left corner logo container */
@@ -61,11 +50,11 @@ p {
 /* left corner logo font */
 .page-name-text {
   font-family: var(--headlineFont);
-  font-size: 2rem;
+  font-size: var(--navLogoSize);
   letter-spacing: 0.2rem;
 }
 
-/* navigation container for screens bigger then 480px */
+/* navigation container for screens not bigger then 747px */
 
 .navigation {
   display: flex;
@@ -73,7 +62,7 @@ p {
   align-items: center;
   width: 100%;
   padding: 1.5rem 1.8rem;
-  background-color: var(--themeColor);
+  background-color: var(--navColor);
 }
 
 .nav-menu {
@@ -89,7 +78,7 @@ p {
 }
 
 .nav-item a {
-  color: white;
+  color: var(--labelFontColor);
   text-decoration: none;
   font-family: var(--contentFont);
   font-size: var(--contentHeadLineTwo);
@@ -109,22 +98,23 @@ p {
   background-color: white;
 }
 
-/* this is the main container for bio */
+/* this is the main container for  the bio section */
+
 .bio {
   display: flex;
   min-height: 66.67%;
   flex-direction: row;
 }
 
-/* this is the image container for bio */
+/* this is the image container for bio section */
 
 .bio-img {
   width: 33.33%;
 }
 
-/* this is the  bio image properties */
+/* this is the bio image */
 
-.bio-img img {
+.profile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -137,7 +127,7 @@ p {
   padding: 1.8rem;
 }
 
-/* bio header text properties */
+/* bio header text header font */
 
 .bio-content h2 {
   text-align: center;
@@ -146,77 +136,52 @@ p {
   font-family: var(--contentFont);
 }
 
-/* bio text properties */
+/* bio text  */
 
 .bio-content p {
   line-height: 1.7;
   letter-spacing: 1.2px;
   color: black;
-  font-size: var(--contentText);
+  font-size: var(--contentFontSize);
   font-family: var(--contentFont);
 }
-/*
+
 .content-holder {
   padding: 2.4rem;
 }
 /* label border */
 
-.label__bio {
+.label {
   width: 100%;
   padding: 1.5rem;
   background-color: var(--labelColor);
 }
 
-.label__filmography {
-  width: 100%;
-  padding: 1.5rem;
-  background-color: var(--labelColor);
-}
-
-.label__soundtrack {
-  width: 100%;
-  margin-top: 1.8rem;
-  padding: 1.5rem;
-  background-color: var(--labelColor);
-}
-.label__nominations {
-  width: 100%;
-  margin-top: 4rem;
-  padding: 1.5rem;
-  background-color: var(--labelColor);
-}
-
-/* label border title text */
-
-.label__bio,
-.label__filmography,
-.label__soundtrack,
-.label__nominations h2 {
-  text-align: left;
-  font-size: 1.8rem;
-  letter-spacing: 0.5rem;
-  color: white;
+.label-title {
   font-family: var(--headlineFont);
+  font-size: var(--headLineSizeOne);
+  color: var(--labelFontColor);
+  padding: 0 2.1rem;
 }
 
 /* film section container */
 
 .film-section {
   min-width: 100%;
+  padding: 2rem;
   display: flex;
-  justify-content: space-around;
-  row-gap: 1.5rem;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 .film-img-section {
-  min-width: 30.33%;
+  min-width: 33.33%;
   padding: 2rem;
   width: 220px;
 }
 
-.film-img-section img {
+.film-img-section__poster {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -232,9 +197,12 @@ p {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-.summary-content p {
+.summary-content__movie-title {
   color: white;
-  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  font-size: var(--headLineSizeTwo);
+  font-family: var(--headlineFont);
 }
 
 .summary-content-nominations {
@@ -258,7 +226,7 @@ i {
 
 .summary-content-nominations h4 {
   font-family: var(--headlineFont);
-  font-size: var(--contentHeadLineTwo);
+  font-size: var(--headLineSizeTwo);
 }
 
 .summary-content-nominations__label {
@@ -267,38 +235,10 @@ i {
   background-color: grey;
 }
 
-.content-rating {
-  width: 100%;
-  display: flex;
-  padding-left: 2rem;
-  justify-content: flex-end;
-  flex-direction: row;
-  flex-wrap: wrap;
-  box-shadow: none;
-  gap: 3rem;
-}
-
-.svg-heart {
-  width: 1.3rem;
-  height: 1.3rem;
-}
-
-#svg-heart-colored {
-  background-color: red;
-}
-
 .summary-content audio {
   width: 70%;
   margin: 0 auto;
   display: table;
-}
-
-.film-rating {
-  background-color: black;
-  position: relative;
-  width: 100%;
-  width: 450px;
-  height: 50px;
 }
 
 .footer-element {
@@ -312,7 +252,7 @@ i {
 
 .footer-element p {
   font-family: var(--contentFont);
-  color: black;
+  color: var(--contentFontColor);
 }
 @media screen and (max-width: 1600px) {
   .bio-img {
@@ -341,18 +281,23 @@ i {
   .hamburger.active .hamburger__bar:nth-child(2) {
     opacity: 0;
   }
-  /*add 0 opacity to the mid span element of the hamburger icon */
+  /*rotates the first child element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) translate(4px);
   }
+  /*rotates the third child element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(3) {
     transform: translateY(-2px) rotate(-45deg) translate(4px);
   }
+
+  /* fixed navigation container for mobile view */
   .navigation {
     position: fixed;
     padding: 1rem 1.8rem;
     z-index: 999;
   }
+
+  /* ul list elmenent movies left -100% */
   .nav-menu {
     left: -100%;
     top: 5rem;
@@ -372,20 +317,11 @@ i {
 
 @media screen and (max-width: 480px) {
   body {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
   }
 
   p {
     color: #404040;
-  }
-
-  .hero-header {
-    display: none;
-  }
-
-  .mobile-overlay {
-    display: block;
-    z-index: 2;
   }
 
   .film-section {
@@ -395,7 +331,7 @@ i {
   }
 
   .film-img-section {
-    width: 33.33%;
+    margin: 2rem;
     padding: 1.5rem;
   }
 }
