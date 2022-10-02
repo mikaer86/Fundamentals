@@ -24,7 +24,7 @@ html {
 .contentText {
   font-size: var(--contentFontSize);
   font-kerning: normal;
-  color: var(--themeColor);
+  color: var(--contentFontColor);
 }
 
 .flex-wrapper {
