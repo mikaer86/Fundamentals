@@ -183,7 +183,7 @@ html {
 }
 /* film section image container */
 .film-img-section {
-  max-width: 30.22%;
+  width: 30.22%;
   margin: 1.8rem;
   width: 280px;
 }
@@ -314,6 +314,9 @@ i {
 }
 
 @media screen and (max-width: 480px) {
+  .content-holder {
+    padding: 1rem;
+  }
   .label {
     width: 100%;
   }
@@ -321,9 +324,11 @@ i {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .film-img-section {
-    width: 100%;
+    width: 80%;
+    padding: 0;
   }
 }
