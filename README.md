@@ -16,7 +16,7 @@ page topics:
 - Director Bio
 - Filmography  + (Summary)
 - Soundtrack info
-- Overview over actor/actresses
+- Overview over  Awards and Nominations
 
 
 
