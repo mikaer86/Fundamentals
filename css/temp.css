@@ -10,7 +10,7 @@ html {
   --contentFontColor: rgb(37, 37, 37);
   --navColor: rgb(36, 36, 36);
   --labelColor: rgb(210, 158, 61);
-  --labelFontColor: rgb(251, 251, 251);
+  --labelFontColor: rgb(242, 242, 242);
   --headlineFont: "Bebas Neue";
   --contentFont: "Montserrat";
 }
@@ -81,7 +81,7 @@ html {
   color: var(--labelFontColor);
   text-decoration: none;
   font-family: var(--contentFont);
-  font-size: var(--contentHeadLineTwo);
+  font-size: var(--);
 }
 
 .hamburger {
@@ -109,7 +109,9 @@ html {
 /* this is the image container for bio section */
 
 .bio-img {
+  display: none;
   width: 33.33%;
+  object-fit: cover;
 }
 
 /* this is the bio image */
@@ -117,7 +119,6 @@ html {
 .profile-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 /* this is the text content container */
@@ -129,11 +130,13 @@ html {
 
 /* bio header text header font */
 
-.bio-content h2 {
+.bio-content__title {
   text-align: center;
   padding-bottom: 1.5rem;
-  font-size: var(--contentHeadLineTwo);
+  font-size: var(--navLinkSize);
   font-family: var(--contentFont);
+  font-weight: bolder;
+  letter-spacing: 0.3rem;
 }
 
 /* bio text  */
@@ -146,6 +149,8 @@ html {
   font-family: var(--contentFont);
 }
 
+/* bio content wrapper */
+
 .content-holder {
   padding: 2.4rem;
 }
@@ -157,11 +162,14 @@ html {
   background-color: var(--labelColor);
 }
 
+/* label title */
+
 .label-title {
   font-family: var(--headlineFont);
-  font-size: var(--headLineSizeOne);
+  font-size: var(--labelFontSize);
   color: var(--labelFontColor);
   padding: 0 2.1rem;
+  letter-spacing: 0.4rem;
 }
 
 /* film section container */
@@ -174,13 +182,14 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
+/* film section image container */
 .film-img-section {
   min-width: 33.33%;
   padding: 2rem;
   width: 220px;
 }
 
+/* film section image */
 .film-img-section__poster {
   width: 100%;
   height: 100%;
@@ -189,6 +198,7 @@ html {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+/* film section sub-container to image (text-content) */
 .summary-content {
   min-width: 100%;
   padding: 1.1rem;
@@ -197,8 +207,10 @@ html {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
+/* film section sub-container to image (text-content) */
+
 .summary-content__movie-title {
-  color: white;
+  color: var(--labelFontColor);
   font-weight: 500;
   text-align: center;
   font-size: var(--headLineSizeTwo);
@@ -255,10 +267,6 @@ i {
   color: var(--contentFontColor);
 }
 @media screen and (max-width: 1600px) {
-  .bio-img {
-    display: none;
-  }
-
   .film-img-section {
     margin-top: 3.6rem;
     margin-bottom: 3.6rem;
@@ -269,7 +277,7 @@ i {
   .hero-header {
     z-index: -1;
   }
-
+  /* film image section added margin for mobile */
   .film-img-section {
     margin: 3.6rem;
   }
@@ -297,7 +305,7 @@ i {
     z-index: 999;
   }
 
-  /* ul list elmenent movies left -100% */
+  /* ul list element movies left -100% */
   .nav-menu {
     left: -100%;
     top: 5rem;
@@ -306,9 +314,13 @@ i {
     flex-direction: column;
     background-color: rgb(20, 20, 20);
   }
+
+  /* link list element */
   .nav-item {
     margin: 0.2rem auto;
   }
+
+  /* link list element active */
   .nav-menu.active {
     left: 0;
     width: 100%;
@@ -316,14 +328,6 @@ i {
 }
 
 @media screen and (max-width: 480px) {
-  body {
-    background-color: #f0f0f0;
-  }
-
-  p {
-    color: #404040;
-  }
-
   .film-section {
     flex-direction: column;
     justify-content: space-evenly;
