@@ -144,7 +144,7 @@ html {
 .bio-content p {
   line-height: 1.7;
   letter-spacing: 1.2px;
-  color: black;
+  color: var(--contentFontColor);
   font-size: var(--contentFontSize);
   font-family: var(--contentFont);
 }
@@ -152,13 +152,14 @@ html {
 /* bio content wrapper */
 
 .content-holder {
-  padding: 2.4rem;
+  padding: 1.4rem;
 }
 /* label border */
 
 .label {
+  display: flex;
   width: 100%;
-  padding: 1.5rem;
+  padding: 1.8rem;
   background-color: var(--labelColor);
 }
 
@@ -168,25 +169,23 @@ html {
   font-family: var(--headlineFont);
   font-size: var(--labelFontSize);
   color: var(--labelFontColor);
-  padding: 0 2.1rem;
   letter-spacing: 0.4rem;
 }
 
 /* film section container */
 
 .film-section {
-  min-width: 100%;
-  padding: 2rem;
+  width: 100%;
+  margin: 7rem auto;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 /* film section image container */
 .film-img-section {
-  min-width: 33.33%;
-  padding: 2rem;
-  width: 220px;
+  max-width: 30.22%;
+  margin: 1.8rem;
+  width: 280px;
 }
 
 /* film section image */
@@ -266,21 +265,8 @@ i {
   font-family: var(--contentFont);
   color: var(--contentFontColor);
 }
-@media screen and (max-width: 1600px) {
-  .film-img-section {
-    margin-top: 3.6rem;
-    margin-bottom: 3.6rem;
-  }
-}
 
 @media screen and (max-width: 747px) {
-  .hero-header {
-    z-index: -1;
-  }
-  /* film image section added margin for mobile */
-  .film-img-section {
-    margin: 3.6rem;
-  }
   /*show hamburger icon */
   .hamburger {
     display: block;
@@ -328,6 +314,9 @@ i {
 }
 
 @media screen and (max-width: 480px) {
+  .label {
+    width: 100%;
+  }
   .film-section {
     flex-direction: column;
     justify-content: space-evenly;
@@ -335,7 +324,6 @@ i {
   }
 
   .film-img-section {
-    margin: 2rem;
-    padding: 1.5rem;
+    width: 100%;
   }
 }
