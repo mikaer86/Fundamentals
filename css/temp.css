@@ -313,7 +313,7 @@ i {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 596px) {
   .content-holder {
     padding: 1rem;
   }
