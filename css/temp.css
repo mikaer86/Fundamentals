@@ -7,6 +7,7 @@ html {
   --navLinkSize: 1.5rem;
   --labelFontSize: 2rem;
   --contentFontSize: 0.98rem;
+  --nominationsFontSize: 1.1rem;
   --contentFontColor: rgb(37, 37, 37);
   --navColor: rgb(36, 36, 36);
   --labelColor: rgb(210, 158, 61);
@@ -172,13 +173,26 @@ html {
   letter-spacing: 0.4rem;
 }
 
+.wiki-content {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  padding: 1.3rem 2rem;
+  border: 0.5px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
 /* film section container */
 
 .film-section {
   width: 100%;
   margin: 7rem auto;
   display: flex;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
 }
 /* film section image container */
@@ -216,13 +230,21 @@ html {
   font-family: var(--headlineFont);
 }
 
-.summary-content-nominations {
+.nominations-section {
+  width: 100%;
   display: flex;
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* nominations section sub-container to image (text-content) */
+.summary-content-nominations {
   width: 80%;
-  justify-content: space-around;
-  flex-wrap: wrap;
   padding: 1.3rem 2rem;
-  margin: 3rem auto;
+  margin-top: 1.8rem;
   border: 0.5px solid grey;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -232,6 +254,7 @@ html {
 i {
   color: var(--textColor);
   font-family: var(--contentFont);
+  font-size: var(--nominationsFontSize);
   padding-top: 1rem;
 }
 
@@ -254,16 +277,20 @@ i {
 
 .footer-element {
   display: flex;
-  min-width: 100%;
-  height: 5.6rem;
+  padding: 3rem;
   align-items: center;
   justify-content: center;
-  background-color: orange;
+  background-color: var(--labelColor);
 }
 
 .footer-element p {
   font-family: var(--contentFont);
   color: var(--contentFontColor);
+}
+@media screen and (max-width: 1600px) {
+  .summary-content-nominations {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 747px) {
@@ -315,7 +342,7 @@ i {
 
 @media screen and (max-width: 596px) {
   .content-holder {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   .label {
     width: 100%;
@@ -330,5 +357,11 @@ i {
   .film-img-section {
     width: 80%;
     padding: 0;
+  }
+
+  .summary-content-nominations {
+    justify-content: space-between;
+    padding: 1.3rem 2rem;
+    margin: 2rem;
   }
 }
