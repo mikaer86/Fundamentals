@@ -386,7 +386,7 @@ i {
 
   .nominations-description {
     justify-content: space-between;
-    padding: 1.7rem 0;
+    padding: 1.7rem 0.4rem;
   }
   .summary-content-nominations {
     justify-content: space-between;
