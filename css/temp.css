@@ -393,3 +393,11 @@ i {
     margin: 2rem;
   }
 }
+
+@media screen and (max-width: 420px) {
+  .nominations-description {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.7rem;
+  }
+}
