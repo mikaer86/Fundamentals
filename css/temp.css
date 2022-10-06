@@ -80,10 +80,10 @@ html {
 }
 
 .nav-item a {
-  color: var(--labelFontColor);
+  color: var(--summaryFontColor);
   text-decoration: none;
   font-family: var(--contentFont);
-  font-size: var(--);
+  font-size: var(--navLinkSize);
 }
 
 .hamburger {
@@ -366,6 +366,9 @@ i {
   .label {
     width: 100%;
   }
+  .label-title {
+    margin: auto;
+  }
   .film-section {
     flex-direction: column;
   }
@@ -378,9 +381,6 @@ i {
 
   .summary-content-nominations p,
   i {
-    color: var(--textColor);
-    font-family: var(--contentFont);
-    font-size: var(--nominationsFontSize);
     padding: 0;
   }
 
