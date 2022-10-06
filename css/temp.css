@@ -189,18 +189,16 @@ html {
 /* film section container */
 
 .film-section {
-  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  width: 100%;
+  justify-content: space-around;
   flex-direction: row;
-  flex-wrap: wrap;
+  padding: 4.6rem 3.6rem 8.6rem 3.6rem;
+  gap: 1.5rem;
 }
 /* film section image container */
 .film-img-section {
-  width: 33.33%;
-  padding: 1.8rem;
-  width: 280px;
+  width: 30.33%;
 }
 
 /* film section image */
@@ -215,6 +213,7 @@ html {
 /* film section sub-container to image (text-content) */
 .summary-content {
   min-width: 100%;
+  margin: 0;
   padding: 1.1rem;
   background-color: rgb(37, 37, 37);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
@@ -246,6 +245,7 @@ html {
   width: 80%;
   padding: 1.3rem 2rem;
   margin-top: 1.8rem;
+  flex-wrap: wrap;
   border: 0.5px solid grey;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -256,7 +256,7 @@ i {
   color: var(--textColor);
   font-family: var(--contentFont);
   font-size: var(--nominationsFontSize);
-  padding-top: 1rem;
+  padding: 2rem 4.5rem;
 }
 
 .summary-content-nominations h4 {
@@ -268,6 +268,18 @@ i {
   width: 100%;
   padding: 1.5rem;
   background-color: grey;
+}
+
+.nominations-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nominations-description {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .summary-content audio {
@@ -297,8 +309,6 @@ i {
 @media screen and (max-width: 747px) {
   .film-section {
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
   }
   .film-img-section {
     width: 90%;
@@ -358,18 +368,28 @@ i {
   }
   .film-section {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 
   .film-img-section {
-    width: 70%;
+    width: 100%;
+    padding: 1.5rem;
+    align-items: center;
+  }
+
+  .summary-content-nominations p,
+  i {
+    color: var(--textColor);
+    font-family: var(--contentFont);
+    font-size: var(--nominationsFontSize);
     padding: 0;
   }
 
+  .nominations-description {
+    justify-content: space-between;
+    padding: 1.7rem 0;
+  }
   .summary-content-nominations {
     justify-content: space-between;
-    padding: 1.3rem 2rem;
     margin: 2rem;
   }
 }
