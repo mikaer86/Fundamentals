@@ -8,10 +8,11 @@ html {
   --labelFontSize: 2rem;
   --contentFontSize: 0.98rem;
   --nominationsFontSize: 1.1rem;
+  --summaryFontColor: rgb(243, 237, 237);
   --contentFontColor: rgb(37, 37, 37);
   --navColor: rgb(36, 36, 36);
   --labelColor: rgb(210, 158, 61);
-  --labelFontColor: rgb(242, 242, 242);
+  --labelFontColor: #3e3e3d;
   --headlineFont: "Bebas Neue";
   --contentFont: "Montserrat";
 }
@@ -189,16 +190,16 @@ html {
 
 .film-section {
   width: 100%;
-  margin: 7rem auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 /* film section image container */
 .film-img-section {
-  width: 30.22%;
-  margin: 1.8rem;
+  width: 33.33%;
+  padding: 1.8rem;
   width: 280px;
 }
 
@@ -223,7 +224,7 @@ html {
 /* film section sub-container to image (text-content) */
 
 .summary-content__movie-title {
-  color: var(--labelFontColor);
+  color: var(--summaryFontColor);
   font-weight: 500;
   text-align: center;
   font-size: var(--headLineSizeTwo);
@@ -233,14 +234,14 @@ html {
 .nominations-section {
   width: 100%;
   display: flex;
-  padding-top: 2.2rem;
-  padding-bottom: 2.2rem;
+  padding-top: 4.2rem;
+  padding-bottom: 4.2rem;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-/* nominations section sub-container to image (text-content) */
+/* nominations section sub-container */
 .summary-content-nominations {
   width: 80%;
   padding: 1.3rem 2rem;
@@ -294,6 +295,14 @@ i {
 }
 
 @media screen and (max-width: 747px) {
+  .film-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .film-img-section {
+    width: 90%;
+  }
   /*show hamburger icon */
   .hamburger {
     display: block;
@@ -349,13 +358,12 @@ i {
   }
   .film-section {
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
   }
 
   .film-img-section {
-    width: 80%;
+    width: 70%;
     padding: 0;
   }
 
