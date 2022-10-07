@@ -22,20 +22,13 @@ html {
   margin: 0;
   box-sizing: border-box;
 }
-
-.contentText {
-  font-size: var(--contentFontSize);
-  font-kerning: normal;
-  color: var(--contentFontColor);
-}
-
+/* wraps all the content */
 .flex-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: auto;
 }
-
+/* main header */
 .hero-header {
   display: flex;
   min-width: 100%;
@@ -56,7 +49,7 @@ html {
   letter-spacing: 0.2rem;
 }
 
-/* navigation container for screens not bigger then 747px */
+/* navigation container  */
 
 .navigation {
   display: flex;
@@ -66,19 +59,19 @@ html {
   padding: 1.5rem 1.8rem;
   background-color: var(--navColor);
 }
-
+/* navigation unordered list element */
 .nav-menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 3.2rem;
 }
-
+/* navigation list element */
 .nav-item {
   padding: 1rem;
   list-style: none;
 }
-
+/* navigation link element*/
 .nav-item a {
   color: var(--summaryFontColor);
   text-decoration: none;
@@ -86,11 +79,12 @@ html {
   font-size: var(--navLinkSize);
 }
 
+/* navigation  hamburger menu container*/
 .hamburger {
   display: none;
   cursor: pointer;
 }
-
+/* navigation hamburger menu span element*/
 .hamburger__bar {
   display: block;
   width: 23px;
@@ -141,7 +135,7 @@ html {
   letter-spacing: 0.3rem;
 }
 
-/* bio text  */
+/* bio content text content */
 
 .bio-content p {
   line-height: 1.7;
@@ -150,9 +144,7 @@ html {
   font-size: var(--contentFontSize);
   font-family: var(--contentFont);
 }
-
-/* bio content wrapper */
-
+/*  text content paddings for bio content  */
 .content-holder {
   padding: 1.4rem;
 }
@@ -174,6 +166,7 @@ html {
   letter-spacing: 0.4rem;
 }
 
+/* wiki container */
 .wiki-content {
   display: flex;
   width: 80%;
@@ -181,9 +174,21 @@ html {
   justify-content: center;
   margin: 3rem auto;
   padding: 1.3rem 2rem;
-  border: 0.5px solid grey;
+  border: 0.5px solid rgb(82, 81, 81);
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.wiki-content i {
+  padding: 1.5rem 2rem;
+}
+
+/* paragraph text for wiki container */
+.contentText {
+  padding: 2.5rem 2rem;
+  font-size: var(--contentFontSize);
+  font-kerning: normal;
+  color: var(--contentFontColor);
 }
 
 /* film section container */
@@ -196,12 +201,15 @@ html {
   padding: 4.6rem 3.6rem 8.6rem 3.6rem;
   gap: 1.5rem;
 }
+
 /* film section image container */
+
 .film-img-section {
   width: 30.33%;
 }
 
 /* film section image */
+
 .film-img-section__poster {
   width: 100%;
   height: 100%;
@@ -210,7 +218,7 @@ html {
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
-/* film section sub-container to image (text-content) */
+/* film section sub-container */
 .summary-content {
   min-width: 100%;
   margin: 0;
@@ -230,6 +238,7 @@ html {
   font-family: var(--headlineFont);
 }
 
+/* film section sub-container to image (text-content) */
 .nominations-section {
   width: 100%;
   display: flex;
@@ -282,6 +291,7 @@ i {
   justify-content: space-evenly;
 }
 
+/* Soundtrack summary audio player*/
 .summary-content audio {
   width: 70%;
   margin: 0 auto;
@@ -337,7 +347,7 @@ i {
     z-index: 999;
   }
 
-  /* ul list element movies left -100% */
+  /* ul list element left -100% */
   .nav-menu {
     left: -100%;
     top: 5rem;
