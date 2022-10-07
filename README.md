@@ -13,9 +13,10 @@ Michael Bay Filmography
 
 page topics:
 
+- Wiki description
 - Director Bio
-- Filmography  + (Summary)
-- Soundtrack info
+- Filmography 
+- Soundtrack audio
 - Overview over  Awards and Nominations
 
 
