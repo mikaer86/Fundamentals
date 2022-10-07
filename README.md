@@ -1,6 +1,6 @@
 # Fundamentals
 
-Date: September 14th 2022
+Date: October 7th 2022
 
 Project purpose: 
 
