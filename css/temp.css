@@ -318,6 +318,9 @@ i {
 }
 
 @media screen and (max-width: 747px) {
+  .wiki-content i {
+    padding: 2rem;
+  }
   .film-section {
     flex-direction: row;
   }
