@@ -43,6 +43,7 @@ html {
   color: white;
 }
 /* left corner logo font */
+
 .page-name-text {
   font-family: var(--headlineFont);
   font-size: var(--navLogoSize);

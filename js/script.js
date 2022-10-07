@@ -2,8 +2,8 @@
 
 //  ################# Navigation ################
 
-const navMobile = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+const navMobile = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
 
 navMobile.addEventListener("click", () => {
   navMobile.classList.toggle("active");
