@@ -338,10 +338,14 @@ i {
   /*rotates the first child element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg) translate(4px);
+    -webkit-transform: translateY(8px) rotate(45deg) translate(4px);
+    -ms-transform: translateY(8px) rotate(45deg) translate(4px);
   }
   /*rotates the third child element of the hamburger icon */
   .hamburger.active .hamburger__bar:nth-child(3) {
     transform: translateY(-2px) rotate(-45deg) translate(4px);
+    -webkit-transform: translateY(-2px) rotate(-45deg) translate(4px);
+    -ms-transform:translateY(-2px) rotate(-45deg) translate(4px);
   }
 
   /* fixed navigation container for mobile view */
