@@ -378,6 +378,11 @@ i {
 }
 
 @media screen and (max-width: 596px) {
+
+  .hero-header {
+    background-image: url("https://i2-prod.manchestereveningnews.co.uk/incoming/article22122872.ece/ALTERNATES/s810/1_Ducie-Street-Warehouse.jpg");
+  }
+
   .content-holder {
     padding: 0.5rem;
   }
