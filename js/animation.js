@@ -7,7 +7,7 @@ ScrollTrigger.batch(".film-img-section", {
   onLeave: batch => gsap.set(batch, {opacity: 0, y: -100, overwrite: true}),
   onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.18, overwrite: true}),
   onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 100, overwrite: true})
-  // you can also define things like start, end, etc.
+
 });
 
 ScrollTrigger.addEventListener("refreshInit", () => gsap.set(".film-img-section", {y: 0}));
