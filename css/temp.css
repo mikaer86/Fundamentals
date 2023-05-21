@@ -147,6 +147,7 @@ html {
 }
 /*  text content paddings for bio content  */
 .content-holder {
+
   padding: 1.4rem;
 }
 /* label border */
@@ -157,6 +158,9 @@ html {
   padding: 1.8rem;
   background-color: var(--labelColor);
 }
+
+/* animation */
+
 
 /* label title */
 
@@ -207,6 +211,9 @@ html {
 
 .film-img-section {
   width: 30.33%;
+  opacity: 0;
+  will-change: transform;
+
 }
 
 /* film section image */
